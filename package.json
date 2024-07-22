@@ -19,6 +19,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "morgan": "^1.10.0",

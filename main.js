@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 app.use(morgan('common'));
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', require('./routes/index'));
 app.use('/api', require('./routes/api'));

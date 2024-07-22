@@ -16,4 +16,9 @@ router.route('/requirements')
     res.status(200).render('requirements');
   });
 
+router.route('*')
+  .get((req, res) => {
+    res.status(404).render('not_found');
+  });
+
 module.exports = router;

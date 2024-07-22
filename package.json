@@ -19,7 +19,6 @@
   "author": "Ioan-Alexandru Catană",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",

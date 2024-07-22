@@ -12,6 +12,11 @@ app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
 app.use(morgan('common'));
 
+app.set('view engine', 'ejs');
+
+app.use('/', require('./routes/index'));
+app.use('/api', require('./routes/api'));
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

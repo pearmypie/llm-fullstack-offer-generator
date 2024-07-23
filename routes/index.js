@@ -8,7 +8,7 @@ router.route('/')
 
 router.route('/offer')
   .get((req, res) => {
-    res.status(200).render('offer');
+    res.status(200).render('offer', { data: req.session.offer || "Nicio oferta primita" });
   });
 
 router.route('/requirements')

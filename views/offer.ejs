@@ -9,14 +9,14 @@
   <link rel="icon" href="javascript.png" type="image/png">
 
   <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="javascript.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">
+        <img src="/javascript.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
         Proiect
       </a>
 
@@ -28,7 +28,7 @@
           <a class="nav-link" href="/about">Despre noi</a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link active" href="/offer">Primiți o ofertă!</a>
+          <a class="nav-link active" href="/requirements">Primiți o ofertă!</a>
         </li>
         <li class="navbar-item">
           <a class="nav-link" href="/contact">Contact</a>
@@ -37,12 +37,38 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container my-2">
+    <div class="row mt-2">
+      <div class="col-4">
+        <div class="container-fluid">
+          <h1 class="fw-bold">Cum funcționează?</h1>
+          <p>Datele de contact, împreună cu cerințele dumneavoastră vor fi preluate de către noi.</p>
+          <br>
+          <p>Detaliile ofertei vor fi generate de un model LLM fine-tuned de către noi.</p>
+          <br>
+          <p>Un reprezentant al companiei noastre vă va contacta în cel mai scurt timp posibil pentru a discuta
+            detaliile.</p>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container-fluid">
+          <h1 class="fw-bold">Aceasta este oferta dumneavoastră!</h1>
+          <p>Navigați către pagina de contact pentru a intra în colaborare.</p>
+        </div>
+
+        <div class="container-fluid mx-2 border shadow">
+          <h2 class="fw-bold">Detalii ofertă:</h2>
+          <p>
+            <%= data %>
+          </p>
+        </div>
+      </div>
+    </div>
 
   </div>
 
-  <!-- Bootstrap JS + Popper.js + jQuery -->
-  <script src="js/bootstrap.bundle.min.js" language="javascript"></script>
+  <!-- Bootstrap JS + Popper.js -->
+  <script src="/js/bootstrap.bundle.min.js" language="javascript"></script>
 </body>
 
 </html>

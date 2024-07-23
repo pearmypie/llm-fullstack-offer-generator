@@ -9,26 +9,28 @@
   <link rel="icon" href="javascript.png" type="image/png">
 
   <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="javascript.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">
+        <img src="/javascript.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
         Proiect
       </a>
 
+      <!-- Navbar links -->
       <ul class="navbar-nav me-auto">
         <li class="navbar-item">
           <a class="nav-link" href="/">Acasă</a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link active" href="/about">Despre noi</a>
+          <a class="nav-link" href="/about">Despre noi</a>
         </li>
         <li class="navbar-item">
-          <a class="nav-link" href="/offer">Primiți o ofertă!</a>
+          <a class="nav-link active" href="/requirements">Primiți o ofertă!</a>
         </li>
         <li class="navbar-item">
           <a class="nav-link" href="/contact">Contact</a>
@@ -36,8 +38,59 @@
       </ul>
     </div>
   </nav>
+
+  <div class="container my-2">
+    <div class="row mt-2">
+      <div class="col-4">
+        <div class="container-fluid">
+          <h1 class="fw-bold">Cum funcționează?</h1>
+          <p>Datele de contact, împreună cu cerințele dumneavoastră vor fi preluate de către noi.</p>
+          <br>
+          <p>Detaliile ofertei vor fi generate de un model LLM fine-tuned de către noi.</p>
+          <br>
+          <p>Un reprezentant al companiei noastre vă va contacta în cel mai scurt timp posibil pentru a discuta
+            detaliile.</p>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="container-fluid">
+          <h1 class="fw-bold">Primiți o ofertă!</h1>
+          <p>Completați formularul de mai jos pentru a primi o ofertă personalizată.</p>
+        </div>
+
+        <form class="mx-2 border shadow" action="/api/submit" method="POST">
+          <div class="mx-2 my-2">
+            <label for="email-address" class="form-label fw-bold">Adresa dumneavoastră de email</label>
+            <input type="email" name="email" placeholder="nume@exemplu.com" class="form-control">
+          </div>
+
+          <div class="mx-2 mt-2">
+            <label for="phone-number" class="form-label fw-bold">Numărul dumneavoastră de telefon</label>
+            <input type="tel" name="telephone_number" placeholder="07xx xxx xxx" class="form-control">
+          </div>
+
+          <div class="mx-2 mt-2">
+            <label for="company-name" class="form-label fw-bold">Numele companiei</label>
+            <input type="text" name="company_name" placeholder="Exemplu SRL" class="form-control">
+          </div>
+
+          <div class="mx-2 mt-2">
+            <label for="requirements" class="form-label fw-bold">Cerințele dumneavoastră</label>
+            <textarea name="requirements" placeholder="Cerințele dumneavoastră aici" class="form-control" rows="12"
+              style="resize: none;"></textarea>
+          </div>
+
+          <button class="btn btn-primary mx-2 my-2" type="submit">
+            Trimiteți cererea
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
   <!-- Bootstrap JS + Popper.js + jQuery -->
-  <script src="js/bootstrap.bundle.min.js" language="javascript"></script>
+  <script src="/js/bootstrap.bundle.min.js" language="javascript"></script>
 </body>
 
 </html>
